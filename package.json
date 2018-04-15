@@ -7,8 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "babel -w src/ -d build/ -s inline",
     "start": "nodemon server.js --exec babel-node",
-    "deploy" : "node_modules/babel-cli/bin/babel.js src/ -d build/",
-    "serve" : "node server.js"
+    "deploy": "node_modules/babel-cli/bin/babel.js src/ -d build/",
+    "serve": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -28,7 +28,9 @@
     "express": "^4.16.3",
     "mongoose": "^5.0.14",
     "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.6.1"
+    "babel-preset-env": "^1.6.1",
+    "uuid": "^3.2.1",
+    "body-parser": "^1.18.2"
   },
   "babel": {
     "presets": [

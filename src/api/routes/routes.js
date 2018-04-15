@@ -22,6 +22,13 @@ export function configure(express) {
   // User Routes
   router.post('/user/', UserController.createUser);
 
+  router.get(
+    [
+      '/user/name/:userName',
+      '/user/key/:userKey'
+    ],
+    UserController.getUserInfo
+  );
   router.route('/user/:userId')
     .get(UserController.getUserInfo)
     .put(UserController.updateUser)

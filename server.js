@@ -4,6 +4,7 @@
 const fs = require('fs');
 const express = require('express');
 const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
 const routes = require('./build/api/routes/routes');
 
 // Server vars
@@ -22,6 +23,10 @@ mongoose.connect('mongodb://mongo/cah_db');
 fs.readdirSync(modelPath)
   .filter(file => ~file.search(/^[^\.].*\.js$/))
   .forEach(file => require(modelPath + file));
+
+// Set up body-parser for the API
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json())
 
 // Load routes
 app.use('/api/v1', routes.configure(express));
