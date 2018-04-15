@@ -8,7 +8,7 @@ const routes = require('./build/api/routes/routes');
 
 // Server vars
 const host = '0.0.0.0';
-const port = 80;
+const port = 8080;
 
 // Set up app
 const app = express();

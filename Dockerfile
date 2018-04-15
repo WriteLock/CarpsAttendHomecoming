@@ -4,7 +4,7 @@ ENV NODE_ENV=production
 ENV DEBUG=false
 ENV DATABASE_URL=mongo
 
-ENV PORT=80
+ENV PORT=8080
 
 ADD package.json /tmp/package.json
 RUN cd /tmp && npm install
