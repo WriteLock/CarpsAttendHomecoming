@@ -1,0 +1,8 @@
+version: '3'
+services:
+    web:
+        env_file:
+            - development.env
+        volumes:
+            - .:/usr/app/cah
+        command: npm run start

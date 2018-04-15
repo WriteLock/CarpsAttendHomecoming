@@ -1,0 +1,11 @@
+version: '3'
+services:
+    web:
+        build:
+          context: .
+        ports:
+            - "8080:80"
+        depends_on:
+            - mongo
+    mongo:
+        image: mongo:3.7-jessie
